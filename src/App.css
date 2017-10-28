@@ -1,0 +1,30 @@
+html, body, .viewport {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.vbox {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 3px solid blue;
+}
+
+.hbox {
+  display: flex;
+  flex-flow: row nowrap;
+  border: 3px solid pink;
+}
+
+.main {
+  flex: 3;
+  justify-content: center;
+  background-color: #FFF;
+  border: 3px solid green;
+}
+
+.panel {
+  flex: 1;
+  background-color: #AFD4C0;
+  /*border: 3px solid orange;*/
+}
