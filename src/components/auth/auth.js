@@ -4,6 +4,21 @@ import '../../App.css'
 import { Link } from 'react-router-dom';
 
 class auth extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      username: "",
+      password: ""
+    }
+  }
+
+  // this.register = this.register.bind(this);
+  //
+  // register() {
+  //
+  // }
+
+
   render() {
     return (
       <div className="vbox viewport">
@@ -11,6 +26,14 @@ class auth extends Component {
           <div className="panel"></div>
           <div class="main">
             <img src={ auth_logo } className="auth-logo"/>
+            <h3>Username</h3>
+            <input id="username"/>
+            <h3>Password</h3>
+            <input id="password"/>
+            <button id="login">Log in</button>
+            <button id="register"
+              onClick={this.register}>
+              Register</button>
           </div>
           <div className="panel"></div>
         </div>
