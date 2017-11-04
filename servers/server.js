@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const massive = require('massive');
 const bodyParser = require('body-parser');
 const session = require('express-session');
@@ -22,7 +23,9 @@ app.use( checkForSession );
 
 
 massive(process.env.DB_CONNECTION_STRING)
-.then(dbInstance => {app.set('db', dbInstance)}
+.then(dbInstance => {
+  console.log('db is connected');
+  app.set('db', dbInstance)}
 );
 
 app.post('/api/auth/login', userController.login);
